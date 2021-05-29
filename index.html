@@ -1,0 +1,167 @@
+<html>	
+<head>
+	<title>kirim kirim</title>
+
+	<style>
+
+	html {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	body {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	header {
+		height: 50px;
+		width: 100%;
+		background-color: #40e0d0;
+		color: black;
+	}
+
+	main {
+		width: 100%;
+		text-align: center;
+		height: 500px;
+		box-sizing: border-box;
+		padding: 20px 0 ;
+	}
+
+	main h1 {
+
+	}
+
+	main p {
+
+	}
+
+	main input {
+		width: 400px;
+		height: 40px;
+		display: block;
+		border-radius: 5px;
+		margin: 15px auto;
+		padding: 5px;
+		border: none;
+		box-shadow: 1px 2px 2px #96f7d2, -1px -2px 2px #96f7d2;
+	}
+
+	main textarea {
+		width: 400px;
+		height: 100px;
+		display:block;
+		border-radius: 5px;
+		margin: 15px auto;
+		font-size: 16px;
+		padding: 5px;
+		border: none;
+		box-shadow: 1px 1px .7px #96f7d2, -1px -1px .7px #96f7d2;
+	}
+
+
+	main button {
+		background-color: #96f7d2;
+		font-size: 16px;
+		font-weight: bold;
+		width: 400px;
+		height: 40px;
+		box-sizing: border-box;
+		padding : 10px;
+		margin: 10px;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align: center;
+		border: none;
+
+	}
+
+	footer {
+		padding: 3px 3px;
+		width: 100vw;
+		background-color: #0ff1ce;
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		flex-direction: start;
+		justify-content: space-between;
+		box-sizing: box-sizing;
+	}
+
+	footer p {
+		color: #800000;
+		font-size: 18px;
+		font-family: arial;
+	}
+
+	footer .text {
+		color: #800000;
+		font-size: 18px;
+		font-family: arial;
+		margin-left: auto;
+	}
+
+	footer .social ul li {
+		display: inline;
+	}
+
+	footer .social ul li img {
+		margin: 0px 5px;
+		width: 30px;
+		height: 30px;
+		object-fit: cover;
+		border-radius: 50px;
+	}
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<p id="container">
+
+		</p>
+	</header>
+
+	<main>
+		<h1>SELAMAT DATANG<h1>
+		<p>Sebuah website untuk mengirim pesan ke WHATSAPP</p>
+		<input type="text" placeholder="Masukkan nomor HP" id="noHP">
+		<textarea placeholder="Masukkan pesan anda....." id="psn"></textarea>
+		<button type="button" id="tombol" onClick="ambil()">Kirim</button>
+	</main>
+
+	<footer>
+		<p>Made with Love by AMProject</p>
+		<p class="text">Contact me :</p>
+		<div class="social">
+			<ul>	
+				<li><img src="assets/img/1.png" alt="social"></img></li>
+				<li><img src="assets/img/2.png" alt="social"></img></li>
+				<li><img src="assets/img/3.png" alt="social"></img></li>
+				<li><img src="assets/img/2.png" alt="social"></img></li>
+			</ul>
+		</div>
+	<footer>
+
+<script >
+
+let ambil = ()=> {
+	const noHP = document.getElementById("noHP").value;
+	const pesan = document.getElementById("psn").value;
+
+	const tombol = document.getElementById("tombol").href= `https://api.whatsapp.com/send/?phone=${noHP}&text=${pesan}&app_absent=0`;
+	window.location.href = tombol;
+}
+
+</script>
+</body>
+
+</html>
